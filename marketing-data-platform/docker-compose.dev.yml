@@ -1,0 +1,62 @@
+# Development-specific docker-compose override
+version: '3.8'
+
+services:
+  # Development API with hot reload
+  api:
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src:rw
+      - ./tests:/app/tests:rw
+      - ./config:/app/config:rw
+      - ./notebooks:/app/notebooks:rw
+    environment:
+      ENV: development
+      DEBUG: 'true'
+    command: ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  # Jupyter notebook for data exploration
+  jupyter:
+    build:
+      context: .
+      target: development
+    container_name: marketing-jupyter
+    command: ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app/notebooks
+      - ./src:/app/src
+      - ./data:/app/data
+    networks:
+      - marketing-network
+    environment:
+      DATABASE_URL: postgresql://marketing_user:secure_password_here@postgres:5432/marketing_platform
+      OPENSEARCH_HOST: opensearch
+
+  # pgAdmin for database management
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: marketing-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    networks:
+      - marketing-network
+    depends_on:
+      - postgres
+
+  # Mailhog for email testing
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: marketing-mailhog
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+    networks:
+      - marketing-network

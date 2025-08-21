@@ -1,0 +1,300 @@
+{
+  "companies": [
+    {
+      "id": "test-001",
+      "identity": {
+        "legal_name": "Akıllı Yazılım Teknolojileri A.Ş.",
+        "trade_name": "SmartSoft",
+        "company_type": "Anonim Şirket",
+        "country": "TR",
+        "city": "İstanbul",
+        "district": "Kadıköy"
+      },
+      "web_presence": {
+        "website_url": "https://www.smartsoft.com.tr",
+        "social_links": {
+          "linkedin": "https://linkedin.com/company/smartsoft",
+          "twitter": "https://twitter.com/smartsoft_tr"
+        }
+      },
+      "contacts": {
+        "emails_public": ["info@smartsoft.com.tr", "sales@smartsoft.com.tr"],
+        "phones_public": ["+902163456789", "+902163456790"],
+        "address_public": "Kadıköy, İstanbul, Türkiye"
+      },
+      "business_meta": {
+        "industry_naics_guess": "541511",
+        "headcount_band_guess": "51-200",
+        "founding_year_guess": 2015,
+        "keywords": ["yazılım", "teknoloji", "bulut", "SaaS", "çözüm"]
+      }
+    },
+    {
+      "id": "test-002",
+      "identity": {
+        "legal_name": "Dijital Pazarlama Çözümleri Ltd. Şti.",
+        "company_type": "Limited Şirket",
+        "country": "TR",
+        "city": "İstanbul",
+        "district": "Şişli"
+      },
+      "web_presence": {
+        "website_url": "https://www.dijitalpazarlama.com",
+        "social_links": {
+          "instagram": "https://instagram.com/dijitalpazarlama",
+          "facebook": "https://facebook.com/dijitalpazarlama"
+        }
+      },
+      "contacts": {
+        "emails_public": ["contact@dijitalpazarlama.com"],
+        "phones_public": ["+902122345678"]
+      },
+      "business_meta": {
+        "industry_naics_guess": "541810",
+        "headcount_band_guess": "11-50",
+        "keywords": ["pazarlama", "dijital", "reklam", "sosyal medya"]
+      }
+    },
+    {
+      "id": "test-003",
+      "identity": {
+        "legal_name": "Yeşil Enerji Sistemleri A.Ş.",
+        "company_type": "Anonim Şirket",
+        "country": "TR",
+        "city": "Ankara",
+        "district": "Çankaya"
+      },
+      "web_presence": {
+        "website_url": "https://www.yesilenerji.com.tr",
+        "google_places": {
+          "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+          "rating": 4.5,
+          "reviews_count": 127
+        }
+      },
+      "contacts": {
+        "emails_public": ["info@yesilenerji.com.tr"],
+        "phones_public": ["+903124567890"],
+        "address_public": "Çankaya, Ankara, Türkiye"
+      },
+      "business_meta": {
+        "industry_naics_guess": "221114",
+        "headcount_band_guess": "201-500",
+        "founding_year_guess": 2010,
+        "keywords": ["enerji", "yenilenebilir", "güneş", "rüzgar", "sürdürülebilir"]
+      }
+    },
+    {
+      "id": "test-004",
+      "identity": {
+        "legal_name": "E-Ticaret Lojistik Hizmetleri Ltd. Şti.",
+        "trade_name": "FastCargo",
+        "company_type": "Limited Şirket",
+        "country": "TR",
+        "city": "İzmir",
+        "district": "Konak"
+      },
+      "web_presence": {
+        "website_url": "https://www.fastcargo.com.tr"
+      },
+      "contacts": {
+        "emails_public": ["operations@fastcargo.com.tr"],
+        "phones_public": ["+902324567890"]
+      },
+      "business_meta": {
+        "industry_naics_guess": "492110",
+        "headcount_band_guess": "51-200",
+        "keywords": ["lojistik", "kargo", "taşımacılık", "e-ticaret", "hızlı teslimat"]
+      }
+    },
+    {
+      "id": "test-005",
+      "identity": {
+        "legal_name": "Sağlık Teknolojileri ve Danışmanlık A.Ş.",
+        "company_type": "Anonim Şirket",
+        "country": "TR",
+        "city": "İstanbul",
+        "district": "Beşiktaş"
+      },
+      "web_presence": {
+        "website_url": "https://www.sagliktek.com",
+        "social_links": {
+          "linkedin": "https://linkedin.com/company/sagliktek"
+        }
+      },
+      "contacts": {
+        "emails_public": ["info@sagliktek.com", "support@sagliktek.com"],
+        "phones_public": ["+902123456789"]
+      },
+      "business_meta": {
+        "industry_naics_guess": "541611",
+        "headcount_band_guess": "11-50",
+        "founding_year_guess": 2018,
+        "keywords": ["sağlık", "teknoloji", "danışmanlık", "dijital sağlık", "telemedicine"]
+      }
+    },
+    {
+      "id": "test-006",
+      "identity": {
+        "legal_name": "Gıda Üretim ve Dağıtım Ltd. Şti.",
+        "trade_name": "TazeLezzetler",
+        "company_type": "Limited Şirket",
+        "country": "TR",
+        "city": "Bursa",
+        "district": "Osmangazi"
+      },
+      "web_presence": {
+        "website_url": "https://www.tazelezzetler.com",
+        "google_places": {
+          "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY5",
+          "rating": 4.2,
+          "reviews_count": 89
+        }
+      },
+      "contacts": {
+        "emails_public": ["siparis@tazelezzetler.com"],
+        "phones_public": ["+902243456789"],
+        "address_public": "Osmangazi, Bursa, Türkiye"
+      },
+      "business_meta": {
+        "industry_naics_guess": "311999",
+        "headcount_band_guess": "11-50",
+        "keywords": ["gıda", "üretim", "dağıtım", "organik", "taze"]
+      }
+    },
+    {
+      "id": "test-007",
+      "identity": {
+        "legal_name": "İnşaat ve Gayrimenkul Yatırım A.Ş.",
+        "company_type": "Anonim Şirket",
+        "country": "TR",
+        "city": "Antalya",
+        "district": "Muratpaşa"
+      },
+      "web_presence": {
+        "website_url": "https://www.insaatyatirim.com.tr"
+      },
+      "contacts": {
+        "emails_public": ["info@insaatyatirim.com.tr"],
+        "phones_public": ["+902423456789"]
+      },
+      "business_meta": {
+        "industry_naics_guess": "236220",
+        "headcount_band_guess": "201-500",
+        "founding_year_guess": 2005,
+        "keywords": ["inşaat", "gayrimenkul", "yatırım", "konut", "proje"]
+      }
+    },
+    {
+      "id": "test-008",
+      "identity": {
+        "legal_name": "Eğitim Teknolojileri Ltd. Şti.",
+        "trade_name": "EduTech",
+        "company_type": "Limited Şirket",
+        "country": "TR",
+        "city": "İstanbul",
+        "district": "Ataşehir"
+      },
+      "web_presence": {
+        "website_url": "https://www.edutech.com.tr",
+        "social_links": {
+          "youtube": "https://youtube.com/c/edutechtr"
+        }
+      },
+      "contacts": {
+        "emails_public": ["hello@edutech.com.tr"],
+        "phones_public": ["+902165678901"]
+      },
+      "business_meta": {
+        "industry_naics_guess": "611710",
+        "headcount_band_guess": "1-10",
+        "founding_year_guess": 2020,
+        "keywords": ["eğitim", "teknoloji", "online", "kurs", "öğrenme"]
+      }
+    },
+    {
+      "id": "test-009",
+      "identity": {
+        "legal_name": "Turizm ve Seyahat Acentası Ltd. Şti.",
+        "trade_name": "TravelPlus",
+        "company_type": "Limited Şirket",
+        "country": "TR",
+        "city": "Muğla",
+        "district": "Bodrum"
+      },
+      "web_presence": {
+        "website_url": "https://www.travelplus.com.tr",
+        "google_places": {
+          "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY6",
+          "rating": 4.7,
+          "reviews_count": 234
+        }
+      },
+      "contacts": {
+        "emails_public": ["rezervasyon@travelplus.com.tr"],
+        "phones_public": ["+902523456789"]
+      },
+      "business_meta": {
+        "industry_naics_guess": "561510",
+        "headcount_band_guess": "11-50",
+        "keywords": ["turizm", "seyahat", "tatil", "otel", "tur"]
+      }
+    },
+    {
+      "id": "test-010",
+      "identity": {
+        "legal_name": "Otomotiv Yedek Parça San. ve Tic. A.Ş.",
+        "company_type": "Anonim Şirket",
+        "country": "TR",
+        "city": "Kocaeli",
+        "district": "Gebze"
+      },
+      "web_presence": {
+        "website_url": "https://www.otoparca.com.tr"
+      },
+      "contacts": {
+        "emails_public": ["satis@otoparca.com.tr"],
+        "phones_public": ["+902626789012"],
+        "address_public": "Gebze Organize Sanayi Bölgesi, Kocaeli"
+      },
+      "business_meta": {
+        "industry_naics_guess": "423120",
+        "headcount_band_guess": "51-200",
+        "founding_year_guess": 2008,
+        "keywords": ["otomotiv", "yedek parça", "sanayi", "ticaret", "üretim"]
+      }
+    }
+  ],
+  "duplicate_pairs": [
+    {
+      "company1_id": "test-001",
+      "company2_id": "test-001-dup",
+      "reason": "Same company with different data sources"
+    },
+    {
+      "company1_id": "test-005",
+      "company2_id": "test-005-variant",
+      "reason": "Same phone number and similar name"
+    }
+  ],
+  "test_queries": [
+    {
+      "query": "yazılım teknoloji",
+      "expected_results": ["test-001", "test-008"],
+      "min_score": 0.7
+    },
+    {
+      "query": "İstanbul limited şirket",
+      "expected_results": ["test-002", "test-008"],
+      "filters": {
+        "city": "İstanbul",
+        "company_type": "Limited Şirket"
+      }
+    },
+    {
+      "query": "enerji yenilenebilir",
+      "expected_results": ["test-003"],
+      "min_score": 0.8
+    }
+  ]
+}
