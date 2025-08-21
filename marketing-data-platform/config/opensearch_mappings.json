@@ -1,0 +1,241 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 1,
+    "analysis": {
+      "analyzer": {
+        "turkish_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "turkish_stop",
+            "turkish_stemmer",
+            "asciifolding"
+          ]
+        },
+        "company_name_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "edge_ngram_filter"
+          ]
+        },
+        "email_analyzer": {
+          "type": "pattern",
+          "pattern": "@",
+          "lowercase": true
+        }
+      },
+      "filter": {
+        "turkish_stop": {
+          "type": "stop",
+          "stopwords": "_turkish_"
+        },
+        "turkish_stemmer": {
+          "type": "stemmer",
+          "language": "turkish"
+        },
+        "edge_ngram_filter": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 20
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "company_id": {
+        "type": "keyword"
+      },
+      "legal_name": {
+        "type": "text",
+        "analyzer": "turkish_analyzer",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          },
+          "suggest": {
+            "type": "text",
+            "analyzer": "company_name_analyzer"
+          }
+        }
+      },
+      "trade_name": {
+        "type": "text",
+        "analyzer": "turkish_analyzer",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "company_type": {
+        "type": "keyword"
+      },
+      "country": {
+        "type": "keyword"
+      },
+      "city": {
+        "type": "keyword",
+        "fields": {
+          "text": {
+            "type": "text",
+            "analyzer": "turkish_analyzer"
+          }
+        }
+      },
+      "district": {
+        "type": "keyword"
+      },
+      "website_url": {
+        "type": "keyword",
+        "fields": {
+          "domain": {
+            "type": "keyword"
+          }
+        }
+      },
+      "website_domain": {
+        "type": "keyword"
+      },
+      "emails": {
+        "type": "keyword",
+        "fields": {
+          "domain": {
+            "type": "text",
+            "analyzer": "email_analyzer"
+          }
+        }
+      },
+      "phones": {
+        "type": "keyword"
+      },
+      "address": {
+        "type": "text",
+        "analyzer": "turkish_analyzer"
+      },
+      "industry": {
+        "type": "keyword",
+        "fields": {
+          "text": {
+            "type": "text"
+          }
+        }
+      },
+      "company_size": {
+        "type": "keyword"
+      },
+      "headcount_band": {
+        "type": "keyword"
+      },
+      "founding_year": {
+        "type": "integer"
+      },
+      "keywords": {
+        "type": "text",
+        "analyzer": "turkish_analyzer",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "rating": {
+        "type": "float"
+      },
+      "reviews_count": {
+        "type": "integer"
+      },
+      "engagement_score": {
+        "type": "float"
+      },
+      "engagement_level": {
+        "type": "keyword"
+      },
+      "priority_tier": {
+        "type": "keyword"
+      },
+      "segment": {
+        "type": "keyword",
+        "fields": {
+          "text": {
+            "type": "text",
+            "analyzer": "turkish_analyzer"
+          }
+        }
+      },
+      "social_links": {
+        "type": "object",
+        "properties": {
+          "linkedin": {
+            "type": "keyword"
+          },
+          "instagram": {
+            "type": "keyword"
+          },
+          "facebook": {
+            "type": "keyword"
+          },
+          "twitter": {
+            "type": "keyword"
+          },
+          "youtube": {
+            "type": "keyword"
+          }
+        }
+      },
+      "google_places": {
+        "type": "object",
+        "properties": {
+          "place_id": {
+            "type": "keyword"
+          },
+          "rating": {
+            "type": "float"
+          },
+          "reviews_count": {
+            "type": "integer"
+          },
+          "business_status": {
+            "type": "keyword"
+          }
+        }
+      },
+      "data_sources": {
+        "type": "keyword"
+      },
+      "confidence_score": {
+        "type": "float"
+      },
+      "gdpr_suppressed": {
+        "type": "boolean"
+      },
+      "created_at": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      },
+      "updated_at": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      },
+      "last_seen": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "suggest": {
+        "type": "completion",
+        "analyzer": "simple",
+        "preserve_separators": true,
+        "preserve_position_increments": true,
+        "max_input_length": 100
+      }
+    }
+  }
+}
